@@ -1,0 +1,5 @@
+//install bootstrap 4
+npm install --save bootstrap@4
+
+
+//add to angular.json under style
