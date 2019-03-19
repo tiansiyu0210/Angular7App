@@ -1,0 +1,16 @@
+download node
+
+run : sudo npm install -g @angular/cli@latest
+
+//create new project
+npm new Angular7App
+
+
+//under the /Angular7App  to run the app
+run: ng serve
+
+localhost:4200
+
+
+
+

@@ -1,0 +1,6 @@
+package.json contains all dependencies
+
+/node_modules is where dependencies installed
+
+
+.ts file extension means typeScript
