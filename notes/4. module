@@ -2,3 +2,9 @@ main.ts file is the first file angular start
 
 
 main.ts ----> app.module.ts ----> app.component.ts
+                                  server.component.ts
+
+
+
+// adding an component
+
