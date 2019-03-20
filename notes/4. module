@@ -1,10 +1,15 @@
 main.ts file is the first file angular start
 
 
-main.ts ----> app.module.ts ----> app.component.ts
+main.ts ----> app.module.ts ----> app.component.ts -----------> link to templateUrl and add to app.component.html
                                   server.component.ts
 
 
 
-// adding an component
+// adding an component by cli
+ng generate component cli-servers
+or
+ng g c cli-servers
+
+//spec file for testing
 
