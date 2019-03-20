@@ -5,11 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './server.component.html'
 })
 export class ServerComponent {
-  serverName = 'tian';
+  serverName = 'localhost';
   serverId = 10;
   serverStatus = 'online';
   allowNewServer = false;
   serverCreationStatus = 'no server was created';
+
+  username = 'tian';
+
 
   getServerStatus() {
     return this.serverStatus;
