@@ -5,5 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './server.component.html'
 })
 export class ServerComponent {
+  serverName = 'tian';
+  serverId = 10;
+  serverStatus = 'online';
+  allowNewServer = false;
 
+  getServerStatus() {
+    return this.serverStatus;
+  }
+
+  constructor() {
+    setTimeout( () => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 }
