@@ -13,3 +13,6 @@ ng g c cli-servers
 
 //spec file for testing
 
+//selector
+[selector-name] take this as an attribute  <div selector-name></div>
+.selector-name  take it as class  <div class="selector-name"></div>
