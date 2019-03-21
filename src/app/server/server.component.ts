@@ -15,9 +15,11 @@ export class ServerComponent {
   serverStatus = 'online';
   allowNewServer = false;
   serverCreationStatus = 'no server was created';
+  servers = ['agile', 'pilot', 'production'];
 
   username = 'tian';
   serveCreated = false;
+
 
 
   getServerStatus() {
@@ -33,6 +35,7 @@ export class ServerComponent {
   }
 
   onCreatedServer() {
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'server was created. creator is:' + this.username ;
   }
 

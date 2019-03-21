@@ -24,6 +24,10 @@
   <p>no server created</p>
 </ng-template>
 
+<div *ngFor="let s of servers; let i = index">
+  length:{{s.length}}---name:{{s}}----{{i + 1}},
+</div>
+
 
 
 
