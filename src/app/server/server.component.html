@@ -15,7 +15,11 @@
 
 <input type="text" class="form-control" [(ngModel)] = "username">
 <p>{{username}}</p>
+<p *ngIf="serveCreated; else noServer"> server created successfully</p>
 
+<ng-template #noServer>
+  <p>no server created</p>
+</ng-template>
 
 
 

@@ -12,6 +12,7 @@ export class ServerComponent {
   serverCreationStatus = 'no server was created';
 
   username = 'tian';
+  serveCreated = false;
 
 
   getServerStatus() {
@@ -25,11 +26,12 @@ export class ServerComponent {
   }
 
   onCreatedServer() {
-    this.serverCreationStatus = 'server was created';
+    this.serverCreationStatus = 'server was created. creator is:' + this.username ;
   }
 
   onUpdateServerName(event: Event) {
     console.log(event);
+    this.serveCreated = true;
     this.serverName = (<HTMLInputElement> event.target).value;
   }
 }
