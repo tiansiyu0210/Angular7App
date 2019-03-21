@@ -16,6 +16,8 @@ export class ServerComponent {
 
 
   getServerStatus() {
+    this.serverId = Math.random();
+    this.serverStatus = this.serverId > 0.5 ? 'online' : 'offline';
     return this.serverStatus;
   }
 
@@ -33,5 +35,10 @@ export class ServerComponent {
     console.log(event);
     this.serveCreated = true;
     this.serverName = (<HTMLInputElement> event.target).value;
+  }
+
+  getColor() {
+    console.log(this.serverStatus === 'online' ? 'green' : 'red');
+    return this.serverStatus === 'online' ? 'green' : 'red';
   }
 }

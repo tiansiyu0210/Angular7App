@@ -1,8 +1,8 @@
 <p>server component</p>
-<p>{{ 'Server' }} name is {{ serverName }}  id is: {{ serverId }} and status is {{ getServerStatus() }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} name is {{ serverName }}  id is: {{ serverId }} and status is {{ getServerStatus() }}</p>
 
 
-<button class="btn btn-primary" [disabled]="!allowNewServer" (dblclick)="onCreatedServer()">add server</button>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreatedServer()">add server</button>
 <p>{{serverCreationStatus}}</p>
 
 <input type="text" class="form-control" (input)="onUpdateServerName($event)">
