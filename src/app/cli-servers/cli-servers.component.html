@@ -1,3 +1,7 @@
 <app-server *ngFor="let s of serversList" [serverTemplate]="s"></app-server>
 
 <app-add-server (serverCreated)="onServerAdded($event)"></app-add-server>
+
+<input type="text" class="form-control" #localRefExample>
+<button class="btn btn-dark" (click)="passLocalRef(localRefExample)">local ref button</button>
+<p>{{localRefTs}}</p>

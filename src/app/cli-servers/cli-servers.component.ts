@@ -8,6 +8,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class CliServersComponent implements OnInit {
   serversList = [{id: 1, name: 'tian'}, {id: 2, name: 'siyu'}];
+  localRefTs = '';
   constructor() { }
 
   ngOnInit() {
@@ -18,6 +19,10 @@ export class CliServersComponent implements OnInit {
       id: serverData.id,
       name : serverData.name
     });
+  }
+
+  passLocalRef(localRefExample: HTMLInputElement){
+    this.localRefTs = localRefExample.value;
   }
 
 }
