@@ -29,7 +29,7 @@ export class CliServersComponent implements OnInit {
     this.localRefTs = localRefExample.value;
   }
 
-  passViewChild(viewChildVar: HTMLInputElement){
+  passViewChild() {
     // console.log(viewChildVar);
     this.viewChildVarTsValue = this.viewChildVarTs.nativeElement.value;
   }
