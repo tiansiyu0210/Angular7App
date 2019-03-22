@@ -21,7 +21,7 @@ export class ServerComponent {
   serveCreated = false;
 
 
-  @Input() serverElement: {id: number, name: string};
+  @Input('serverTemplate') serverElement: {id: number, name: string};
 
 
   getServerStatus() {
