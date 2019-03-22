@@ -5,3 +5,9 @@
 <input type="text" class="form-control" #localRefExample>
 <button class="btn btn-dark" (click)="passLocalRef(localRefExample)">local ref button</button>
 <p>{{localRefTs}}</p>
+
+<br>
+<input type="text" class="form-control" #viewChildVar>
+<button class="btn btn-dark" (click)="passViewChild(viewChildVar)">view child button</button>
+<p> {{viewChildVarTsValue}} </p>
+<p> {{viewChildVarTs.nativeElement.value}} </p>

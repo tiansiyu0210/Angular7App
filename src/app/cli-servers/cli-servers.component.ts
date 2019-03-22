@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-cli-servers',
@@ -9,6 +9,9 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 export class CliServersComponent implements OnInit {
   serversList = [{id: 1, name: 'tian'}, {id: 2, name: 'siyu'}];
   localRefTs = '';
+  viewChildVarTsValue = '';
+
+  @ViewChild('viewChildVar') viewChildVarTs: ElementRef;
   constructor() { }
 
   ngOnInit() {
@@ -22,7 +25,13 @@ export class CliServersComponent implements OnInit {
   }
 
   passLocalRef(localRefExample: HTMLInputElement){
+    console.log(this.viewChildVarTs.nativeElement.value);
     this.localRefTs = localRefExample.value;
+  }
+
+  passViewChild(viewChildVar: HTMLInputElement){
+    // console.log(viewChildVar);
+    this.viewChildVarTsValue = this.viewChildVarTs.nativeElement.value;
   }
 
 }
