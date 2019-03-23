@@ -1,0 +1,9 @@
+component lifecycle
+
+ngOnChanges: called after a bound input property changes
+
+ngOnInit : called once the component is initialized
+
+ngDoCheck: called during every change detection run
+
+

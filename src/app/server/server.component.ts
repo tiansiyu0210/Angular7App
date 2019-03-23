@@ -20,8 +20,17 @@ export class ServerComponent {
   username = 'tian';
   serveCreated = false;
 
+  constructor() {
+    this.serverStatus = 'online';
+    // setTimeout( () => {
+    //   this.allowNewServer = true;
+    // }, 2000);
+  }
+
+
 
   @Input('serverTemplate') serverElement: {id: number, name: string};
+
 
 
   getServerStatus() {
@@ -29,11 +38,6 @@ export class ServerComponent {
     return this.serverStatus;
   }
 
-  constructor() {
-    setTimeout( () => {
-      this.allowNewServer = true;
-    }, 2000);
-  }
 
   onCreatedServer() {
     this.servers.push(this.serverName);

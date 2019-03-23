@@ -1,7 +1,9 @@
 <p>server component</p>
-<p [ngStyle]="{backgroundColor: getColor()}"
-  [ngClass]="{online: serverStatus === 'online'}">
-  {{ 'Server' }} name is {{ serverName }}  id is: {{ serverId }} and status is {{ getServerStatus() }}</p>
+<p>{{ 'Server' }} name is {{ serverName }}  id is: {{ serverId }} and status is {{ getServerStatus() }}</p>
+
+<!--[ngStyle]="{backgroundColor: getColor()}"-->
+  <!--[ngClass]="{online: serverStatus === 'online'}"-->
+
 
 
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreatedServer()">add server</button>
