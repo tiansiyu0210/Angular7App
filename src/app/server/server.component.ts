@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-server',
@@ -9,7 +9,7 @@ import {Component, Input} from '@angular/core';
     }
   `]
 })
-export class ServerComponent {
+export class ServerComponent implements OnChanges, OnInit, OnDestroy{
   serverName = 'localhost';
   serverId = 10;
   serverStatus = 'online';
@@ -21,6 +21,7 @@ export class ServerComponent {
   serveCreated = false;
 
   constructor() {
+    console.log('in the ServerComponent constructor');
     this.serverStatus = 'online';
     // setTimeout( () => {
     //   this.allowNewServer = true;
@@ -28,8 +29,19 @@ export class ServerComponent {
   }
 
 
+  ngOnChanges(changes: SimpleChanges){
+    console.log('in the ServerComponent ngOnChanges');
+    console.log(changes);
+  }
+
+  ngOnInit() {
+    console.log('in the ServerComponent ngOnInit');
+  }
+
+
 
   @Input('serverTemplate') serverElement: {id: number, name: string};
+  @Input() updatedFirstServerName: string;
 
 
 
@@ -53,5 +65,9 @@ export class ServerComponent {
   getColor() {
     console.log(this.serverStatus === 'online' ? 'green' : 'red');
     return this.serverStatus === 'online' ? 'green' : 'red';
+  }
+
+  ngOnDestroy() {
+    console.log('in the ServerComponent ngOnDestroy');
   }
 }

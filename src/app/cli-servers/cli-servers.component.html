@@ -1,5 +1,5 @@
-<app-server *ngFor="let s of serversList" [serverTemplate]="s"></app-server>
-
+<app-server *ngFor="let s of serversList" [serverTemplate]="s" [updatedFirstServerName]="s.name">
+</app-server>
 <app-add-server (serverCreated)="onServerAdded($event)"></app-add-server>
 
 <input type="text" class="form-control" #localRefExample>
@@ -11,3 +11,9 @@
 <button class="btn btn-dark" (click)="passViewChild()">view child button</button>
 <p> {{viewChildVarTsValue}} </p>
 <p> {{viewChildVarTs.nativeElement.value}} </p>
+
+
+<br>
+<button class="btn btn-dark" (click)="ChangeFirstServername()">change first server name</button>
+<hr>
+<button class="btn btn-danger" (click)="DestoryFirstServer()">estory first server</button>

@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-cli-servers',
@@ -6,7 +6,7 @@ import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angu
   styleUrls: ['./cli-servers.component.css'],
   encapsulation: ViewEncapsulation.Emulated// this is default, we don;t havw to add here, other option is NONE and Native
 })
-export class CliServersComponent implements OnInit {
+export class CliServersComponent implements OnInit , OnDestroy{
   serversList = [{id: 1, name: 'tian'}, {id: 2, name: 'siyu'}];
   localRefTs = '';
   viewChildVarTsValue = '';
@@ -32,6 +32,18 @@ export class CliServersComponent implements OnInit {
   passViewChild() {
     // console.log(viewChildVar);
     this.viewChildVarTsValue = this.viewChildVarTs.nativeElement.value;
+  }
+
+  ChangeFirstServername(){
+    this.serversList[0].name = 'changed';
+  }
+
+  DestoryFirstServer(){
+    this.serversList.splice(0, 1);
+  }
+
+  ngOnDestroy() {
+    console.log('in the CliServersComponent ngOnDestroy');
   }
 
 }
