@@ -11,3 +11,6 @@ structural directives :
 
 create directives:
 ng g d [name]
+
+
+https://angular.io/api/core/Renderer2
