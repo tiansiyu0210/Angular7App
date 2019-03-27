@@ -4,6 +4,8 @@
     <div class="col-md-12">
       <app-recipes *ngIf="tagName === 'recipe'"></app-recipes>
       <app-shopping-list *ngIf="tagName !== 'recipe'"></app-shopping-list>
+
+      <p appBasicHighlight> basic highlight directive</p>
     </div>
   </div>
 </div>
@@ -11,3 +13,4 @@
 
 <!--<app-server></app-server>-->
 <!--<app-cli-servers></app-cli-servers>-->
+
