@@ -6,7 +6,7 @@
       <app-shopping-list *ngIf="tagName !== 'recipe'"></app-shopping-list>
 
       <p appBasicHighlight> basic highlight directive</p>
-      <p appBetterHighlight> better highlight directive</p>
+      <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'"> better highlight directive</p>
     </div>
   </div>
 </div>
