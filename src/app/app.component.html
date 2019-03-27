@@ -11,6 +11,15 @@
       <div *appUnless="!test" >
         <p>basic highlight directive</p>
       </div>
+      <div class="row">
+        <input class="input-group-sm" type="number" [(ngModel)]="numbersEl">
+        <div [ngSwitch]="numbersEl">
+          <div class="col-sm-4" *ngSwitchCase="1">value is 1</div>
+          <div class="col-sm-4" *ngSwitchCase="2">value is 2</div>
+          <div class="col-sm-4" *ngSwitchCase="3">value is 3</div>
+          <div class="col-sm-4"  *ngSwitchDefault>no match</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

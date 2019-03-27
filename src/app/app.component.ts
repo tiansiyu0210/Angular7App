@@ -9,6 +9,7 @@ export class AppComponent {
 
   tagName = 'recipe';
   test = true;
+  numbersEl = 1;
 
   triggerTag(tagname: string){
     this.tagName = tagname;
