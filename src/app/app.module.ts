@@ -15,6 +15,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { AddServerComponent } from './cli-servers/add-server/add-server.component';
 import {BasicHighlightDirective} from './basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {BasicHighlightDirective} from './basic-highlight/basic-highlight.directi
     ShoppingListComponent,
     ShoppingEditComponent,
     AddServerComponent,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,

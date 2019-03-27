@@ -8,3 +8,6 @@ attribute directives:
 
 
 structural directives :
+
+create directives:
+ng g d [name]
