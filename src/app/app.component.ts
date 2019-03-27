@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   tagName = 'recipe';
+  test = true;
 
   triggerTag(tagname: string){
     this.tagName = tagname;
+  }
+
+  changeTest(){
+    this.test = !this.test;
   }
 }

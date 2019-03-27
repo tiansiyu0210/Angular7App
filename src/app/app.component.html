@@ -7,6 +7,10 @@
 
       <p appBasicHighlight> basic highlight directive</p>
       <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'"> better highlight directive</p>
+      <button class="btn btn-primary" (click)="changeTest()">hide/show</button>
+      <div *appUnless="!test" >
+        <p>basic highlight directive</p>
+      </div>
     </div>
   </div>
 </div>
