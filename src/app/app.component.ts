@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  tagName = 'recipe';
+
+  triggerTag(tagname: string){
+    this.tagName = tagname;
+  }
 }
