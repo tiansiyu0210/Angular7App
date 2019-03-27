@@ -7,7 +7,9 @@ ngIf  ngFor
 attribute directives:
 
 
-structural directives :
+structural directives : *ngIf * ngFor
+
+<div *ngIf="test">   ====>   <ng-template [ngIf]="test">
 
 create directives:
 ng g d [name]
