@@ -1,4 +1,5 @@
 import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
+import {LogService} from '../services/log.service';
 
 @Component({
   selector: 'app-server',
@@ -7,7 +8,8 @@ import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@an
      .online {
       color: white
     }
-  `]
+  `],
+  providers: [LogService]
 })
 export class ServerComponent implements OnChanges, OnInit, OnDestroy{
   serverName = 'localhost';
@@ -20,7 +22,7 @@ export class ServerComponent implements OnChanges, OnInit, OnDestroy{
   username = 'tian';
   serveCreated = false;
 
-  constructor() {
+  constructor(private logService: LogService) {
     console.log('in the ServerComponent constructor');
     this.serverStatus = 'online';
     // setTimeout( () => {
@@ -29,9 +31,10 @@ export class ServerComponent implements OnChanges, OnInit, OnDestroy{
   }
 
 
-  ngOnChanges(changes: SimpleChanges){
+  ngOnChanges(changes: SimpleChanges) {
     console.log('in the ServerComponent ngOnChanges');
     console.log(changes);
+    this.logService.toLog(changes.toString());
   }
 
   ngOnInit() {
